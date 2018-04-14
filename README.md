@@ -1,5 +1,3 @@
-Week 18 Homework for UT Coding Bootcamp, July 2016-January 2017
-
 Scrape the website dailykos.com and use mongo db to store articles and run my own comments sections.
 
 Copyright 2018 Seyi Ekundayo.  All rights reserved.
