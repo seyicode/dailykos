@@ -37,13 +37,17 @@ app.use(express.static("public"));
 
 
 // Database configuration with mongoose
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 mongoose.connect("mongodb://heroku_z3vrnqqn:u5ah129tbdnucvkud7ksra1ika@ds119718.mlab.com:19718/heroku_z3vrnqqn");
-var db = mongoose.connection;
+ var db = mongoose.connection;
 
-db.on("error", function(error) {
-  console.log("Mongoose Error: ", error);
-});
-
+ db.on("error", function(error) {
+   console.log("Mongoose Error: ", error);
+ });
+// mongoose.Promise = Promise;
+// mongoose.connect(MONGODB_URI, {
+//   useMongoClient: true
+// });
 // Once logged in to the db through mongoose, log a success message
 db.once("open", function() {
   console.log("Mongoose connection successful.");
